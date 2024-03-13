@@ -1,20 +1,6 @@
 # Given there is a string, we need to reverse the string without using inbuilt method reverse, we need to reverse the string using stack.
 
-class MyStack():
-    def __init__(self):
-        self.stack = list()
-
-    def push(self, item):
-        self.stack.append(item)
-
-    def pop(self):
-        return self.stack.pop()
-
-    def is_empty(self):
-        return len(self.stack) == 0
-
-    def display(self):
-        print(self.stack)
+from Stack import MyStack
 
 
 def reverse(string):
@@ -29,6 +15,13 @@ def reverse(string):
     return output
 
 
-str = input('Enter a string to reverse: ')
+results = []
+test_cases = int(input())
+while (test_cases > 0):
+    str = input()
+    results.append(reverse(str))
+    test_cases -= 1
 
-print(reverse(str))
+print('\n')
+for result in results:
+    print(result)
