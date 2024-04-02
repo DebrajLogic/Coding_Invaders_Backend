@@ -16,5 +16,5 @@ def find_repeat(s):
             return letter
 
 
-s = "abccbaacz"
+s = "abcdd"
 find_repeat(s)
